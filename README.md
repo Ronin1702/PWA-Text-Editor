@@ -50,21 +50,107 @@ SO THAT I can reliably retrieve them for later use
 
 ## Installation
 
-- Packages to support this application can be installed by using [*npm install*](https://docs.npmjs.com/cli/v9/commands/npm-install) commands.
+1. Packages to support this application can be installed by using [*npm install*](https://docs.npmjs.com/cli/v9/commands/npm-install) commands.
 
     > **Note**: If you do not have a `package.json` in your directory already, enter command below to [*initiate*](https://docs.npmjs.com/cli/v9/commands/npm-init).
     >
     > ```powershell
     > npm init -y
     > ```
-    >
-    >and then
-    >
-    > ```powershell
-    > npm i @babel/core@7.22.17 @babel/plugin-proposal-object-rest-spread@7.20.7 @babel/preset-env@7.22.15 babel-loader@9.1.3 concurrently@8.2.1  css-loader@6.8.1 express@4.18.2 html-webpack-plugin@5.5.3 http-server@14.1.1 style-loader@3.3.3 idb@7.1.1 if-env@1.0.4 webpack@5.88.2 webpack-cli@5.1.4 webpack-dev-server@4.15.1 webpack-pwa-manifest@4.3.0 workbox-webpack-plugin@7.0.0
-    > ```
-    >
-    > **Important**: Please @ the **EXACT** versions as shown above to ensure the functionality of this application.
+  
+2. **IMPORTANT**: Please **configure/edit** each `package.json` in `root`, `server` and `client` directory to include below critical `dependencies` and `scripts` prior to `npm install` to ensure proper functionality.
+
+    **Root Directory `package.json`:**
+
+    ```json
+    {
+      "main": "server.js",
+      "engines": {
+        "node": "18.17.1",
+        "npm": "9.8.1"
+      },
+      "scripts": {
+        "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+        "start": "npm run build && cd server && node server.js",
+        "server": "cd server nodemon server.js --ignore client",
+        "build": "cd client && npm run build",
+        "install": "cd server && npm i && cd ../client && npm i",
+        "client": "cd client && npm start"
+      },
+      "dependencies": {
+        "express": "^4.18.2",
+        "if-env": "^1.0.4"
+      },
+      "devDependencies": {
+        "concurrently": "^8.2.1",
+        "nodemon": "^3.0.1"
+      }
+    }
+    ```
+
+   **Server Directory `package.json`:**
+
+    ```json
+    {
+      "main": "server.js",
+      "engines": {
+          "node": "18.17.1",
+          "npm": "9.8.1"
+      },
+      "scripts": {
+          "server": "nodemon server.js --ignore client"
+      },
+      "dependencies": {
+          "express": "^4.18.2"
+      },
+      "devDependencies": {
+          "nodemon": "^3.0.1"
+      }
+    }
+    ```
+
+   **Client Directory `package.json`:**
+
+    ```json
+    {
+      "engines": {
+      "node": "18.17.1",
+      "npm": "9.8.1"
+      },
+      "scripts": {
+        "dev": "webpack-dev-server",
+        "build": "webpack --mode production",
+        "start": "webpack --watch"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.22.17",
+        "@babel/plugin-transform-runtime": "^7.22.15",
+        "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+        "@babel/preset-env": "^7.22.15",
+        "@babel/runtime": "^7.22.15",
+        "babel-loader": "^9.1.3",
+        "css-loader": "^6.8.1",
+        "html-webpack-plugin": "^5.5.3",
+        "http-server": "^14.1.1",
+        "style-loader": "^3.3.3",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^4.15.1",
+        "webpack-pwa-manifest": "^4.3.0",
+        "workbox-webpack-plugin": "^7.0.0"
+      },
+      "dependencies": {
+        "code-mirror-themes": "^1.0.0",
+        "idb": "^6.1.2"
+      }
+    }
+    ```
+
+3. Once all the `package.json` files are properly configured, run the following command to install all dependencies:
+
+    ```powershell
+    npm install
+    ```
 
 [*back to top*](#table-of-contents)
 
