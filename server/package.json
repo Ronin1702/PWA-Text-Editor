@@ -1,18 +1,26 @@
 {
     "name": "JATE",
     "version": "1.0.0",
-    "description": "",
+    "description": "This is a text editor app that runs in the browser.The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.",
     "main": "server.js",
     "scripts": {
         "server": "nodemon server.js --ignore client"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "keywords": [
+      "PWA",
+      "Node",
+      "Express",
+      "Heroku",
+      "Webpack",
+      "IndexedDB",
+      "idb"
+    ],
+    "author": "Kai Chen",
+    "license": "MIT",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.18.2"
     },
     "devDependencies": {
-        "nodemon": "^2.0.4"
+        "nodemon": "^3.0.1"
     }
 }
