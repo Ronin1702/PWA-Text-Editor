@@ -1,6 +1,6 @@
 # PWA-Text-Editor [![MIT](https://img.shields.io/static/v1.svg?label=📃%20License&message=MIT&color=important)](./LICENSE)
 
-This is a text editor app that runs in the browser.The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+[PWA Text Editor 3000](https://pwa-text-editor-3000-95372c5eab90.herokuapp.com/) is a text editor app that runs in the browser.This app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
 
 ## Table of Contents
 
@@ -119,7 +119,7 @@ SO THAT I can reliably retrieve them for later use
 [![Tweet about this](https://img.shields.io/static/v1.svg?label=Tweet%20about%20this&message=🎵&color=blue&logo=twitter&style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20Text%20Editor%20PWA%20on%20GitHub:%20https://github.com/Ronin1702/Text-Editor)
 
 - GitHub Repo: [Text-Editor](https://github.com/Ronin1702/Text-Editor)
-- Heroku App: [Heroku App Link](https://www.mongodb.com/products/tools/compass)
+- Heroku App Deployed Link: [PWA Text Editor 3000](https://pwa-text-editor-3000-95372c5eab90.herokuapp.com/)
 
 [_back to top_](#table-of-contents)
 
