@@ -3,17 +3,21 @@
     "version": "1.0.0",
     "description": "This is a text editor app that runs in the browser.The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.",
     "main": "server.js",
+    "engines": {
+        "node": "18.17.1",
+        "npm": "9.8.1"
+    },
     "scripts": {
         "server": "nodemon server.js --ignore client"
     },
     "keywords": [
-      "PWA",
-      "Node",
-      "Express",
-      "Heroku",
-      "Webpack",
-      "IndexedDB",
-      "idb"
+        "PWA",
+        "Node",
+        "Express",
+        "Heroku",
+        "Webpack",
+        "IndexedDB",
+        "idb"
     ],
     "author": "Kai Chen",
     "license": "MIT",

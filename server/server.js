@@ -9,4 +9,4 @@ app.use(express.json());
 
 require('./routes/htmlRoutes')(app);
 
-app.listen(PORT, () => console.log("Check out the app locally @ "+`http://localhost:${PORT}`+" 🚀!"));
+app.listen(PORT, () => console.log("Cmd(Ctrl)+Left Click to Open PWA on "+`http://localhost:${PORT}`+" 🚀!"));
