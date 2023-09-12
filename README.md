@@ -1,6 +1,6 @@
-# PWA-Text-Editor [![MIT](https://img.shields.io/static/v1.svg?label=📃%20License&message=MIT&color=important)](./LICENSE)
+# J.A.T.E. [![MIT](https://img.shields.io/static/v1.svg?label=📃%20License&message=MIT&color=important)](./LICENSE)
 
-[PWA Text Editor 3000](https://pwa-text-editor-3000-95372c5eab90.herokuapp.com/) is a text editor app that runs in the browser.This app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
+***[J.A.T.E.](https://jate-3000-36dde5eb5bd6.herokuapp.com/)*** is a <ins> ***Just Another Text Editor*** </ins> app that runs in the browser. This app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ I WANT to create notes or code snippets with or without an internet connection
 SO THAT I can reliably retrieve them for later use
 ```
 
-[_back to top_](#table-of-contents)
+[*back to top*](#table-of-contents)
 
 ## Tech Stack
 
@@ -34,7 +34,6 @@ SO THAT I can reliably retrieve them for later use
     - [![Babel Plugin-Proposal-Object-Rest-Spread Package](https://img.shields.io/badge/Babel%20Plugin--Proposal--Object--Rest--Spread-7.20.7-green?logo=npm)](https://www.npmjs.com/package/@babel/plugin-proposal-object-rest-spread)
     - [![Babel Runtime Package](https://img.shields.io/badge/Babel%20Runtime-7.15.8-green?logo=npm)](https://www.npmjs.com/package/@babel/runtime)
   - [![CSS Loader Package](https://img.shields.io/badge/CSS--Loader-6.8.1-green?logo=webpack)](https://www.npmjs.com/package/css-loader)
-  - [![DotEnv Package](https://img.shields.io/badge/DotEnv-16.3.1-green?logo=dotenv)](https://www.npmjs.com/package/dotenv)
   - [![Express Package](https://img.shields.io/badge/Express-4.18.2-green?logo=express)](https://www.npmjs.com/package/express)
   - [![HTML Webpack Plugin Package](https://img.shields.io/badge/HTML--Webpack--Plugin-5.5.3-green?logo=webpack)](https://www.npmjs.com/package/html-webpack-plugin)
   - [![http-server Package](https://img.shields.io/badge/Http--Server-14.1.1-green?logo=npm)](https://www.npmjs.com/package/http-server)
@@ -47,13 +46,13 @@ SO THAT I can reliably retrieve them for later use
     - [![Webpack Manifest Plugin Package](https://img.shields.io/badge/Webpack--Manifest--Plugin-4.3.0-green?logo=webpack)](https://www.npmjs.com/package/webpack-manifest-plugin)
     - [![Workbox Webpack Plugin Package](https://img.shields.io/badge/Workbox--Webpack--Plugin-7.0.0-green?logo=webpack)](https://www.npmjs.com/package/workbox-webpack-plugin)
 
-[_back to top_](#table-of-contents)
+[*back to top*](#table-of-contents)
 
 ## Installation
 
-- Packages to support this application can be installed by using [_npm install_](https://docs.npmjs.com/cli/v9/commands/npm-install) commands.
+- Packages to support this application can be installed by using [*npm install*](https://docs.npmjs.com/cli/v9/commands/npm-install) commands.
 
-    > **Note**: If you do not have a `package.json` in your directory already, enter command below to [_initiate_](https://docs.npmjs.com/cli/v9/commands/npm-init).
+    > **Note**: If you do not have a `package.json` in your directory already, enter command below to [*initiate*](https://docs.npmjs.com/cli/v9/commands/npm-init).
     >
     > ```powershell
     > npm init -y
@@ -62,11 +61,12 @@ SO THAT I can reliably retrieve them for later use
     >and then
     >
     > ```powershell
-    > npm i concurrently@8.2.1 dotenv@16.3.1 express@4.18.2 idb@7.1.1 if-env@1.0.4 webpack@5.88.2
+    > npm i @babel/core@7.22.17 @babel/plugin-proposal-object-rest-spread@7.20.7 @babel/preset-env@7.22.15 babel-loader@9.1.3 concurrently@8.2.1  css-loader@6.8.1 express@4.18.2 html-webpack-plugin@5.5.3 http-server@14.1.1 style-loader@3.3.3 idb@7.1.1 if-env@1.0.4 webpack@5.88.2 webpack-cli@5.1.4 webpack-dev-server@4.15.1 webpack-pwa-manifest@4.3.0 workbox-webpack-plugin@7.0.0
     > ```
     >
+    > **Important**: Please @ the **EXACT** versions as shown above to ensure the functionality of this application.
 
-[_back to top_](#table-of-contents)
+[*back to top*](#table-of-contents)
 
 ## Usage
 
@@ -106,28 +106,28 @@ SO THAT I can reliably retrieve them for later use
     THEN I should have proper build scripts for a webpack application
     ```
 
-[_back to top_](#table-of-contents)
+[*back to top*](#table-of-contents)
 
 ## Screenshots
 
-<!-- [![GIF Name](local GIF location)](Video Link) -->
+![Demo GIF](./client/src/images/00-demo.gif)
 
-[_back to top_](#table-of-contents)
+[*back to top*](#table-of-contents)
 
 ## Links
 
 [![Tweet about this](https://img.shields.io/static/v1.svg?label=Tweet%20about%20this&message=🎵&color=blue&logo=twitter&style=social)](https://twitter.com/intent/tweet?text=Check%20out%20this%20Text%20Editor%20PWA%20on%20GitHub:%20https://github.com/Ronin1702/Text-Editor)
 
 - GitHub Repo: [Text-Editor](https://github.com/Ronin1702/Text-Editor)
-- Heroku App Deployed Link: [PWA Text Editor 3000](https://pwa-text-editor-3000-95372c5eab90.herokuapp.com/)
+- Heroku App Deployed Link: [JATE-3000](https://jate-3000-36dde5eb5bd6.herokuapp.com/)
 
-[_back to top_](#table-of-contents)
+[*back to top*](#table-of-contents)
 
 ## License
 
 - This application is licensed by [![MIT](https://img.shields.io/static/v1.svg?label=📃%20License&message=MIT&color=important)](./LICENSE).
 
-[_back to top_](#table-of-contents)
+[*back to top*](#table-of-contents)
 
 ---
-[![Copyright](https://img.shields.io/static/v1.svg?label=Text%20Editor%20PWA%20©️%20&message=%202023%20Kai%20Chen&labelColor=informational&color=033450)](https://kaichen.biz)
+[![Copyright](https://img.shields.io/static/v1.svg?label=JATE-3000%20©️%20&message=%202023%20Kai%20Chen&labelColor=informational&color=033450)](https://kaichen.biz)
