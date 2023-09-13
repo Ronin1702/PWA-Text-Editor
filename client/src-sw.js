@@ -25,16 +25,6 @@ const pageCache = new CacheFirst({
   ],
 });
 
-// warmStrategyCache will 'warm' the page by fetch the URLs and store them in the cache
-warmStrategyCache({
-  urls: ['/index.html', '/'],
-  strategy: pageCache,
-});
-
-// Implement CacheFirst strategy with pageCache configuration by requesting mode 'navigate', a mode for pages.
-registerRoute(({ request }) => request.mode === 'navigate', pageCache);
-
-// Set up caching for assets
 // Use StableWhileRevalidate to shorten response times by immediately returning cached responses while updating the cache in the background
 const assetCache = new StaleWhileRevalidate({
   cacheName: 'asset-cache',
@@ -55,14 +45,24 @@ const assetCache = new StaleWhileRevalidate({
   ],
 });
 
-// Implement asset caching by asset destination by requesting destination 'assets'
+// warmStrategyCache will 'warm' the page by fetch the URLs and store them in the cache
+warmStrategyCache({
+  urls: ['../index.html', './src/images/logo.png', './src/css/style.css', '../favicon.ico'],
+  strategy: pageCache,
+});
+
+// Implement CacheFirst strategy with pageCache configuration by requesting mode 'navigate', a mode for pages.
+registerRoute(({ request }) => request.mode === 'navigate', pageCache);
+
+// Implement asset caching by pointing to the asset destination by requesting destination by asset types.
 registerRoute(
   ({ request }) =>
     request.destination === 'script' ||
     request.destination === 'style' ||
     request.destination === 'image' ||
     request.destination === 'font',
-  // If there's a matching destination, use the StaleWhileRevalidate strategy with assetCache configuration above
+
+  // If there's a type that matches the destination, use the StableWhileRevalidate strategy with assetCache configuration above
   assetCache
 );
 
