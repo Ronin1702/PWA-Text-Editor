@@ -6,39 +6,50 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 //Add and configure workbox plugins for a service worker and manifest file.
 module.exports = () => {
   return {
+    // set mode to development
     mode: 'development',
+
     entry: {
+      // set entry points for main bundle
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      // set entry points for install bundle
+      install: './src/js/install.js',
     },
+
     output: {
+      // set the bundled javascript file name with the main entry point name
       filename: '[name].bundle.js',
+      // Output the bundled javascript file to the dist folder
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Webpack plugin that generates our html file and injects our bundles. 
+      // Webpack plugin that generates our html file and injects our bundles.
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'J.A.T.E.',
-      }),
-
-      // Injects our custom service worker
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        title: 'J.A.T.E.'
       }),
 
       // Creates a manifest.json file.
       new WebpackPwaManifest({
+        // fingerprints: false allows webpack to not append a hash to the manifest.json file name.
         fingerprints: false,
+
+        // inject: true allows webpack to inject the manifest.json file into the index.html file.
         inject: true,
-        name: 'J.A.T.E. (Just Another Text Editor)',
+        name: 'Just Another Text Editor',
         short_name: 'JATE',
-        description: 'JATE is Just Another Text Editor app that runs in the browser. This app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.',
+        description:
+          'JATE is Just Another Text Editor app that serves as a PWA-based text editor which features data persistence and offline support.',
         background_color: '#225ca3',
         theme_color: '#225ca3',
-        start_url: './',
-        publicPath: './',
+
+        // start_url: '/' allows webpack to set the start_url property of the manifest.json file to the root of the application.
+        start_url: '/',
+
+        // publicPath: '/' allows webpack to set the publicPath property of the manifest.json file to the root of the application.
+        publicPath: '/',
+
+        // icons: [] allows webpack to add an array of icons images to the manifest.json file.
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -47,25 +58,48 @@ module.exports = () => {
           },
         ],
       }),
-    ],
 
+      // Injects our custom service worker
+      new InjectManifest({
+        // the path to the service worker source file
+        swSrc: './src-sw.js',
+        // the path and to the service worker output file
+        swDest: './dist-sw.js',
+      }),
+    ],
 
     //Add CSS loaders and babel to webpack.
     module: {
       rules: [
         {
+          // Test for files with .css extension
           test: /\.css$/i,
+
+          // Use the style-loader to inject the css into the DOM, and css-loader to handle the css imports in JavaScript
           use: ['style-loader', 'css-loader'],
         },
+
+        // Transpile all files ending in .js using babel's transpiler
         {
+          // Test for files with .js or .mjs extension
           test: /\.m?js$/,
+
+          // Exclude node_modules directory from transpilation
           exclude: /node_modules/,
-          // We use babel-loader in order to use ES6.
+
+          // Use babel-loader in order to use ES6.
           use: {
             loader: 'babel-loader',
             options: {
+              // Use @babel/preset-env to transpile based on targeted browser or runtime environments.
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+              plugins: [
+                // Use @babel/plugin-proposal-object-rest-spread to transpile object spread into ES6
+                '@babel/plugin-proposal-object-rest-spread',
+
+                // Use @babel/plugin-transform-runtime to externalize references to helpers and builtins, automatically poly-filing codes without polluting globals.
+                '@babel/plugin-transform-runtime',
+              ],
             },
           },
         },

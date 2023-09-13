@@ -1,10 +1,10 @@
 {
     "name": "JATE",
     "version": "1.0.0",
-    "description": "This is a text editor app that runs in the browser.The app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.",
+    "description": "Server-side code for the JATE PWA text editor.",
     "main": "server.js",
     "engines": {
-        "node": "18.17.1",
+        "node": "20.6.1",
         "npm": "9.8.1"
     },
     "scripts": {
@@ -12,12 +12,11 @@
     },
     "keywords": [
         "PWA",
-        "Node",
-        "Express",
-        "Heroku",
-        "Webpack",
-        "IndexedDB",
-        "idb"
+        "node",
+        "npm",
+        "express",
+        "heroku",
+        "server"
     ],
     "author": "Kai Chen",
     "license": "MIT",

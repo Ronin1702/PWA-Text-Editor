@@ -1,16 +1,16 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "JATE is Just Another Text Editor app that runs in the browser. This app will be a single-page application that meets the PWA criteria. Additionally, it will feature a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. The application will also function offline.",
+  "description": "JATE is Just Another Text Editor app that serves as a PWA-based text editor which features data persistence and offline support.",
   "main": "server.js",
   "engines": {
-    "node": "18.17.1",
+    "node": "20.6.1",
     "npm": "9.8.1"
   },
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run build && cd server && node server.js",
-    "server": "cd server nodemon server.js --ignore client",
+    "server": "cd server && nodemon server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
@@ -27,6 +27,7 @@
   "author": "Kai Chen",
   "license": "MIT",
   "dependencies": {
+    "core-js": "^3.32.2",
     "express": "^4.18.2",
     "if-env": "^1.0.4"
   },

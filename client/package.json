@@ -1,9 +1,11 @@
 {
   "name": "JATE",
+  "version": "1.0.0",
+  "description": "JATE is Just Another Text Editor app that serves as a PWA-based text editor which features data persistence and offline support.",
   "engines": {
-    "node": "18.17.1",
+    "node": "20.6.1",
     "npm": "9.8.1"
-},
+  },
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack --mode production",
@@ -12,7 +14,7 @@
   "author": "Kai Chen",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.22.17",
+    "@babel/core": "^7.22.15",
     "@babel/plugin-transform-runtime": "^7.22.15",
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.22.15",
