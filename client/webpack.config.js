@@ -99,6 +99,17 @@ module.exports = () => {
 
                 // Use @babel/plugin-transform-runtime to externalize references to helpers and builtins, automatically poly-filing codes without polluting globals.
                 '@babel/plugin-transform-runtime',
+
+                // // Suppresses warnings from deprecated setImmediate polyfill
+                // {
+                //   apply: (compiler) => {
+                //     compiler.hooks.thisCompilation.tap('SuppressDeprecationWarning', (compilation) => {
+                //       compilation.warnings = compilation.warnings.filter(
+                //         (warning) => !warning.message.includes('DEP_WEBPACK_COMPILATION_ASSETS')
+                //       );
+                //     });
+                //   },
+                // },
               ],
             },
           },

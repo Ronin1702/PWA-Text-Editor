@@ -1,3 +1,9 @@
+// core-js/stable is a polyfill library that includes ES2019+ features such as Array.prototype.flat() and Array.prototype.flatMap() that are not supported in older browsers.
+import 'core-js/stable';
+
+// regenerator-runtime/runtime is a library that enables async/await syntax to work in older browsers. 
+import 'regenerator-runtime/runtime';
+
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';

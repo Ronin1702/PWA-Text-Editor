@@ -24,27 +24,35 @@ SO THAT I can reliably retrieve them for later use
 
 ## Tech Stack
 
+- [![CSS3](https://img.shields.io/badge/CSS3-gray?logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [![HTML5](https://img.shields.io/badge/HTML5-gray?logo=html5)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+- [![Javascript](https://img.shields.io/badge/JavaScript-ES6+-yellow?logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - [![ESLint](https://img.shields.io/badge/ESLint-v7.32.0-yellow?logo=eslint)](https://eslint.org/)
+  - [![Prettier](https://img.shields.io/badge/Prettier-v2.4.1-yellow?logo=prettier)](https://prettier.io/)
 - [![Node.js](https://img.shields.io/badge/Node.js®-v20.6.1-blue?logo=node.js)](https://nodejs.org/en)
+  - [![npm](https://img.shields.io/badge/npm-v10.1.0-blue?logo=npm)](https://docs.npmjs.com/cli/v10/)
+    - [![Concurrently Package](https://img.shields.io/badge/concurrently-8.2.1-green?logo=npm)](https://www.npmjs.com/package/concurrently)
+    - [![babel Core Package](https://img.shields.io/badge/@babel/core-7.22.15-green?logo=babel)](https://www.npmjs.com/package/@babel/core)
 
-- [![npm](https://img.shields.io/badge/npm-v9.8.1-blue?logo=npm)](https://docs.npmjs.com/cli/v9/)
-  - [![Concurrently Package](https://img.shields.io/badge/Concurrently-8.2.1-green?logo=npm)](https://www.npmjs.com/package/concurrently)
-  - [![Babel-Loader Package](https://img.shields.io/badge/Babel--Loader-9.1.3-green?logo=npm)](https://www.npmjs.com/package/babel-loader)
-    - [![Babel Core Package](https://img.shields.io/badge/Babel--Core-7.22.17-green?logo=npm)](https://www.npmjs.com/package/@babel/core)
-    - [![Babel Preset-Env Package](https://img.shields.io/badge/Babel%20Preset--Env-7.22.15-green?logo=npm)](https://www.npmjs.com/package/@babel/preset-env)
-    - [![Babel Plugin-Proposal-Object-Rest-Spread Package](https://img.shields.io/badge/Babel%20Plugin--Proposal--Object--Rest--Spread-7.20.7-green?logo=npm)](https://www.npmjs.com/package/@babel/plugin-proposal-object-rest-spread)
-    - [![Babel Runtime Package](https://img.shields.io/badge/Babel%20Runtime-7.15.8-green?logo=npm)](https://www.npmjs.com/package/@babel/runtime)
-  - [![CSS Loader Package](https://img.shields.io/badge/CSS--Loader-6.8.1-green?logo=webpack)](https://www.npmjs.com/package/css-loader)
-  - [![Express Package](https://img.shields.io/badge/Express-4.18.2-green?logo=express)](https://www.npmjs.com/package/express)
-  - [![HTML Webpack Plugin Package](https://img.shields.io/badge/HTML--Webpack--Plugin-5.5.3-green?logo=webpack)](https://www.npmjs.com/package/html-webpack-plugin)
-  - [![http-server Package](https://img.shields.io/badge/Http--Server-14.1.1-green?logo=npm)](https://www.npmjs.com/package/http-server)
-  - [![style-loader Package](https://img.shields.io/badge/Style--Loader-3.3.3-green?logo=webpack)](https://www.npmjs.com/package/style-loader)
-  - [![IDB Package](https://img.shields.io/badge/IDB-7.1.1-green?logo=npm)](https://www.npmjs.com/package/idb)
-  - [![If-Env Package](https://img.shields.io/badge/If--Env-1.0.4-green?logo=npm)](https://www.npmjs.com/package/if-env)
-  - [![Webpack Package](https://img.shields.io/badge/Webpack-5.88.2-green?logo=webpack)](https://webpack.js.org/)
-    - [![Webpack CLI Package](https://img.shields.io/badge/Webpack--CLI-5.1.4-green?logo=webpack)](https://www.npmjs.com/package/webpack-cli)
-    - [![Webpack Dev Server Package](https://img.shields.io/badge/Webpack--Dev--Server-4.15.1-green?logo=webpack)](https://www.npmjs.com/package/webpack-dev-server)
-    - [![Webpack Manifest Plugin Package](https://img.shields.io/badge/Webpack--Manifest--Plugin-4.3.0-green?logo=webpack)](https://www.npmjs.com/package/webpack-manifest-plugin)
-    - [![Workbox Webpack Plugin Package](https://img.shields.io/badge/Workbox--Webpack--Plugin-7.0.0-green?logo=webpack)](https://www.npmjs.com/package/workbox-webpack-plugin)
+      - [![babel-loader Package](https://img.shields.io/badge/babel--loader-9.1.3-green?logo=babel)](https://www.npmjs.com/package/babel-loader)
+      - [![babel Preset-Env Package](https://img.shields.io/badge/babel%20Preset--Env-7.22.15-green?logo=babel)](https://www.npmjs.com/package/@babel/preset-env)
+      - [![babel Plugin-Proposal-Object-Rest-Spread Package](https://img.shields.io/badge/babel%20Plugin--Proposal--Object--Rest--Spread-7.20.7-green?logo=babel)](https://www.npmjs.com/package/@babel/plugin-proposal-object-rest-spread)
+      - [![babel Runtime Package](https://img.shields.io/badge/@babel/runtime-7.22.15-green?logo=babel)](https://www.npmjs.com/package/@babel/runtime)
+      - [![@babel/plugin-transform-runtime": "^7.22.15](https://img.shields.io/badge/@babel/plugin--transform--runtime-7.22.15-green?logo=babel)](https://www.npmjs.com/package/@babel/plugin-transform-runtime)
+
+    - [![Express Package](https://img.shields.io/badge/Express-4.18.2-green?logo=express)](https://www.npmjs.com/package/express)
+    - [![http-server Package](https://img.shields.io/badge/http--Server-14.1.1-green?logo=npm)](https://www.npmjs.com/package/http-server)
+    - [![html Webpack Plugin Package](https://img.shields.io/badge/html--webpack--plugin-5.5.3-green?logo=npm)](https://www.npmjs.com/package/html-webpack-plugin)
+    - [![IndexedDB Package](https://img.shields.io/badge/idb-7.1.1-green?logo=npm)](https://www.npmjs.com/package/idb)
+    - [![If-Env Package](https://img.shields.io/badge/if--env-1.0.4-green?logo=npm)](https://www.npmjs.com/package/if-env)
+    - [![nodemon Package](https://img.shields.io/badge/nodemon-3.0.1-green?logo=nodemon)](https://www.npmjs.com/package/nodemon)
+    - [![webpack Package](https://img.shields.io/badge/Webpack-5.88.2-green?logo=webpack)](https://webpack.js.org/)
+      - [![CSS Loader Package](https://img.shields.io/badge/CSS--Loader-6.8.1-green?logo=webpack)](https://www.npmjs.com/package/css-loader)
+      - [![style-loader Package](https://img.shields.io/badge/Style--Loader-3.3.3-green?logo=webpack)](https://www.npmjs.com/package/style-loader)
+      - [![Webpack CLI Package](https://img.shields.io/badge/Webpack--CLI-5.1.4-green?logo=webpack)](https://www.npmjs.com/package/webpack-cli)
+      - [![Webpack Dev Server Package](https://img.shields.io/badge/Webpack--Dev--Server-4.15.1-green?logo=webpack)](https://www.npmjs.com/package/webpack-dev-server)
+      - [![Webpack Manifest Plugin Package](https://img.shields.io/badge/Webpack--Manifest--Plugin-4.3.0-green?logo=webpack)](https://www.npmjs.com/package/webpack-manifest-plugin)
+      - [![Workbox Webpack Plugin Package](https://img.shields.io/badge/Workbox--Webpack--Plugin-7.0.0-green?logo=webpack)](https://www.npmjs.com/package/workbox-webpack-plugin)
 
 [*back to top*](#table-of-contents)
 
@@ -58,7 +66,7 @@ SO THAT I can reliably retrieve them for later use
     > npm init -y
     > ```
   
-2. **IMPORTANT**: Please **configure/edit** each `package.json` in `root`, `server` and `client` directory to include below critical `dependencies` and `scripts` prior to `npm install` to ensure proper functionality.
+2. **IMPORTANT**: Please configure each `package.json` in `root`, `server` and `client` directory with below critical `dependencies` and `scripts` prior to `npm install` to ensure proper functionality.
 
     **Root Directory `package.json`:**
 
@@ -66,13 +74,13 @@ SO THAT I can reliably retrieve them for later use
     {
       "main": "server.js",
       "engines": {
-        "node": "18.17.1",
-        "npm": "9.8.1"
+        "node": "20.6.1",
+        "npm": "10.1.0 "
       },
       "scripts": {
         "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
         "start": "npm run build && cd server && node server.js",
-        "server": "cd server nodemon server.js --ignore client",
+        "server": "cd server && nodemon server.js --ignore client",
         "build": "cd client && npm run build",
         "install": "cd server && npm i && cd ../client && npm i",
         "client": "cd client && npm start"
@@ -94,8 +102,8 @@ SO THAT I can reliably retrieve them for later use
     {
       "main": "server.js",
       "engines": {
-          "node": "18.17.1",
-          "npm": "9.8.1"
+          "node": "20.6.1",
+          "npm": "10.1.0"
       },
       "scripts": {
           "server": "nodemon server.js --ignore client"
@@ -114,16 +122,16 @@ SO THAT I can reliably retrieve them for later use
     ```json
     {
       "engines": {
-      "node": "18.17.1",
-      "npm": "9.8.1"
+      "node": "20.6.1",
+      "npm": "10.1.0"
       },
-      "scripts": {
-        "dev": "webpack-dev-server",
-        "build": "webpack --mode production",
-        "start": "webpack --watch"
+     "scripts": {
+      "dev": "webpack-dev-server",
+      "build": "webpack --mode production",
+      "start": "webpack --watch"
       },
       "devDependencies": {
-        "@babel/core": "^7.22.17",
+        "@babel/core": "^7.22.15",
         "@babel/plugin-transform-runtime": "^7.22.15",
         "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
         "@babel/preset-env": "^7.22.15",
@@ -141,8 +149,9 @@ SO THAT I can reliably retrieve them for later use
       },
       "dependencies": {
         "code-mirror-themes": "^1.0.0",
+        "core-js": "^3.32.2",
         "idb": "^6.1.2"
-      }
+        }
     }
     ```
 
@@ -216,4 +225,5 @@ SO THAT I can reliably retrieve them for later use
 [*back to top*](#table-of-contents)
 
 ---
+
 [![Copyright](https://img.shields.io/static/v1.svg?label=JATE-3000%20©️%20&message=%202023%20Kai%20Chen&labelColor=informational&color=033450)](https://kaichen.biz)
