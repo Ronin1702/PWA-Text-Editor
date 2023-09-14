@@ -47,6 +47,7 @@ SO THAT I can reliably retrieve them for later use
     - [![If-Env Package](https://img.shields.io/badge/if--env-1.0.4-green?logo=npm)](https://www.npmjs.com/package/if-env)
     - [![nodemon Package](https://img.shields.io/badge/nodemon-3.0.1-green?logo=nodemon)](https://www.npmjs.com/package/nodemon)
     - [![webpack Package](https://img.shields.io/badge/Webpack-5.88.2-green?logo=webpack)](https://webpack.js.org/)
+      - [![Code Mirror Themes Package](https://img.shields.io/badge/Code--Mirror--Themes-1.0.0-green?logo=webpack)](https://www.npmjs.com/package/code-mirror-themes)
       - [![CSS Loader Package](https://img.shields.io/badge/CSS--Loader-6.8.1-green?logo=webpack)](https://www.npmjs.com/package/css-loader)
       - [![style-loader Package](https://img.shields.io/badge/Style--Loader-3.3.3-green?logo=webpack)](https://www.npmjs.com/package/style-loader)
       - [![Webpack CLI Package](https://img.shields.io/badge/Webpack--CLI-5.1.4-green?logo=webpack)](https://www.npmjs.com/package/webpack-cli)
