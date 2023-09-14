@@ -1,3 +1,4 @@
+// Required modules
 const { offlineFallback, warmStrategyCache } = require('workbox-recipes');
 const { CacheFirst, StaleWhileRevalidate } = require('workbox-strategies');
 const { registerRoute } = require('workbox-routing');
@@ -5,18 +6,20 @@ const { CacheableResponsePlugin } = require('workbox-cacheable-response');
 const { ExpirationPlugin } = require('workbox-expiration');
 const { precacheAndRoute } = require('workbox-precaching/precacheAndRoute');
 
+// Precache all the assets in the build folder
 precacheAndRoute(self.__WB_MANIFEST);
 
+// Cache strategy using CacheFirst to cache pages
 const pageCache = new CacheFirst({
   cacheName: 'page-cache',
   plugins: [
     new CacheableResponsePlugin({
-      // Cache only 200 responses.
+      // Cache 0 (dev Browser-base API response) and  200 (Request OK) responses.
       statuses: [0, 200],
     }),
     new ExpirationPlugin({
 
-      // 60 pages max in cache
+      // 60 cache entries max
       maxEntries: 60,
 
       // 30 days x 24 hours x 60 minutes x 60 seconds
@@ -45,9 +48,11 @@ const assetCache = new StaleWhileRevalidate({
   ],
 });
 
-// warmStrategyCache will 'warm' the page by fetch the URLs and store them in the cache
+// warmStrategyCache will 'warm up' the page by fetching the URLs and store them in the cache
 warmStrategyCache({
-  urls: ['../index.html', './src/images/logo.png', './src/css/style.css', '../favicon.ico'],
+  
+  // Construct an array of URLs to be cached, first is index.html from dist folder, if it doesn't exist, then cache the root URL. 
+  urls: ['/index.html', '/'],
   strategy: pageCache,
 });
 
@@ -66,5 +71,5 @@ registerRoute(
   assetCache
 );
 
-// offlineFallback will return the index.html page if a page is not found in the cache
-offlineFallback({ pageFallback: './index.html' });
+// Useful for SPA, offlineFallback will return the index.html page if a page is not found in the cache.
+offlineFallback({ pageFallback: '/index.html' });
