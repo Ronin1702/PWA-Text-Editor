@@ -63,8 +63,8 @@ module.exports = () => {
       new InjectManifest({
         // the path to the service worker source file
         swSrc: './src-sw.js',
-        // the path and to the service worker output file
-        swDest: './dist-sw.js',
+        // the path to the service worker output file
+        swDest: 'src-sw.js',
       }),
     ],
 

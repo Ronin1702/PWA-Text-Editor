@@ -1,5 +1,5 @@
 // Import methods to save and get data from the indexedDB database in './database.js'
-import { getDb, putDb } from './database';
+import { getDb, putDb } from './database.js';
 import { header } from './header';
 
 export default class {
@@ -10,6 +10,14 @@ export default class {
     if (typeof CodeMirror === 'undefined') {
       throw new Error('CodeMirror is not loaded');
     }
+
+    // // preload the editor with header modified from header.js before codemirror is loaded
+    // const headerEl= document.createElement('pre');
+    // headerEl.textContent = header;
+    // headerEl.className = 'textHeader';
+    // headerEl.style.fontFamily = 'monospace';
+    // document.querySelector('#main').before(headerEl);
+
 
     this.editor = CodeMirror(document.querySelector('#main'), {
       value: '',
@@ -29,6 +37,7 @@ export default class {
       this.editor.setValue(data || localData || header);
     });
 
+    // save the content of the editor when the editor itself is changed
     this.editor.on('change', () => {
       localStorage.setItem('content', this.editor.getValue());
     });

@@ -14,9 +14,10 @@ const initdb = async () => {
 
           //exit out of the function if the database already exists.
           return;
-        } 
-        
+        } console.log('🚀 - V.1 Jate on IndexedDB Connected');
+
         // Create a new object store for the data and give it an key name of 'id' which needs to increment automatically.
+        console.log('🚀 - Now creating object storage named jate');
         db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
         console.log('🚀 - jate database created');
         },
@@ -29,47 +30,18 @@ const initdb = async () => {
   }
 };
 
-// Logic to PUT method that accepts some content and adds it to the database
-// Export a function that will use to PUT to the database.
-export const putDb = async (content) => {
-  console.log('Try to implement PUT method to the database');
-
-  try {
-    // Create a connection to the database and the version we want to use.
-    const updateJate= await openDB('jate', 1);
-
-    // Create a new transaction and specify the database and data privileges.
-    const tx = updateJate.transaction('jate', 'readwrite');
-
-    // Open up the desired object store.
-    const store = tx.objectStore('jate');
-
-    // Use the .put() method on the store and pass in indexed ID and the content.
-    const request = store.put({'content': content}, );
-
-    // Get confirmation of the request.
-    const result = await request;
-
-    console.log('🚀 - PUT data saved to IndexedDB', result);
-  }
-  catch (err) {
-    console.error('❌ - Failed to PUT new data:', err);
-  }
-};
-
 // Logic for GET method that gets all the content from the database
 // Export a function that will use to GET all from the database.
 export const getDb = async () => {
-  console.log('Try to GET all from the database');
-
+  
   //Try to get all data from the database.
   try {
-
+    console.log('Trying to GET all from the database');
     // Create a connection to the database and the version to use.
-    const getJates = await openDB('jate', 1);
+    const contactDb = await openDB('jate', 1);
 
     // Create a new transaction and specify the database and data privileges.
-    const tx = getJates.transaction('jate', 'readonly');
+    const tx = contactDb.transaction('jate', 'readonly');
 
     // Open up the desired object store.
     const store = tx.objectStore('jate');
@@ -117,6 +89,34 @@ export const getDb = async () => {
 
     // return null when failed to get data
     return null;
+  }
+};
+
+// Logic to PUT method that accepts some content and adds it to the database
+// Export a function that will use to PUT to the database.
+export const putDb = async (content) => {
+  
+  try {
+    console.log('Try to implement PUT method to the database');
+    // Create a connection to the database and the version we want to use.
+    const contactDb = await openDB('jate', 1);
+
+    // Create a new transaction and specify the database and data privileges.
+    const tx = contactDb.transaction('jate', 'readwrite');
+
+    // Open up the desired object store.
+    const store = tx.objectStore('jate');
+
+    // Use the .put() method on the store and pass in indexed ID and the content.
+    const request = store.put({ content: content });
+
+    // Get confirmation of the request.
+    const result = await request;
+
+    console.log('🚀 - PUT data saved to IndexedDB', result);
+  }
+  catch (err) {
+    console.error('❌ - Failed to PUT new data:', err);
   }
 };
 
