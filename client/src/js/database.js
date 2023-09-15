@@ -1,7 +1,7 @@
 import { openDB } from 'idb';
 
 const initdb = async () => {
-  
+  console.log('⏳ -  Connecting to IndexedDB');
   // Try to create a new database.
   try {
     // Creating a connection and a new database named 'jate' which will be using version 1 of the database.
@@ -10,14 +10,14 @@ const initdb = async () => {
       // Add  database schema if it has not already been initialized.
       upgrade(db) {
         if (db.objectStoreNames.contains('jate')) {
-          console.log('🚀 - jate database already exists');
+          console.log('📜 - jate database already exists');
 
           //exit out of the function if the database already exists.
           return;
         } console.log('🚀 - V.1 Jate on IndexedDB Connected');
 
         // Create a new object store for the data and give it an key name of 'id' which needs to increment automatically.
-        console.log('🚀 - Now creating object storage named jate');
+        console.log('⏳ - Now creating object storage named jate');
         db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
         console.log('🚀 - jate database created');
         },
@@ -33,10 +33,10 @@ const initdb = async () => {
 // Logic for GET method that gets all the content from the database
 // Export a function that will use to GET all from the database.
 export const getDb = async () => {
-  
+  console.log('⏳ - Trying to GET all from the database');
   //Try to get all data from the database.
   try {
-    console.log('Trying to GET all from the database');
+    
     // Create a connection to the database and the version to use.
     const contactDb = await openDB('jate', 1);
 
@@ -54,7 +54,7 @@ export const getDb = async () => {
 
       // if there are no keys:
       if (keys.length === 0) {
-        console.log('The database is clean and clear of entries');
+        console.log('📭 - The database is clean and clear of entries');
 
         // if no keys found, return null
         return null;
@@ -67,7 +67,7 @@ export const getDb = async () => {
 
       // count if there's any, if not:
       if (count === 0) {
-        console.log('No data stored in the database');
+        console.log('📭 - No data stored in the database');
 
         // return null
         return null;
@@ -95,9 +95,9 @@ export const getDb = async () => {
 // Logic to PUT method that accepts some content and adds it to the database
 // Export a function that will use to PUT to the database.
 export const putDb = async (content) => {
-  
+  console.log('Try to implement PUT method to the database');
   try {
-    console.log('Try to implement PUT method to the database');
+    
     // Create a connection to the database and the version we want to use.
     const contactDb = await openDB('jate', 1);
 
