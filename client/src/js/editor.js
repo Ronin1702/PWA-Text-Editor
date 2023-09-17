@@ -37,13 +37,13 @@ export default class {
         const mostRecentEntry = data[data.length - 1];
         const content = mostRecentEntry.content;
         this.editor.setValue(content);
-        console.info('Loaded data from IndexedDB, injecting into editor');
+        console.info('🚀 - Loaded data from IndexedDB, injecting into editor');
       } else {
         this.editor.setValue(localData || header);
-        console.info('Loaded data from localStorage, injecting into editor');
+        console.info('🚀 - Loaded data from localStorage, injecting into editor');
       }
     }).catch((err) => {
-      console.error('Failed to load data from IndexedDB, falling back to localStorage or header', err)
+      console.error('❌ - Failed to load data from IndexedDB, falling back to localStorage or header', err)
     })
 
     // save the content of the editor when the editor itself is changed
@@ -53,7 +53,7 @@ export default class {
 
     // Save the content of the editor when the editor itself is loses focus
     this.editor.on('blur', () => {
-      console.log('The editor has lost focus');
+      console.log('⚠️ - The editor has lost focus');
       putDb(localStorage.getItem('content'));
     });
   }

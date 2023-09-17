@@ -80,7 +80,7 @@ export const getDb = async () => {
     // Get confirmation of the request.
     const result = await request;
 
-    console.log('Retrieved Data: ', result);
+    console.log('📨 - Retrieved Data: ', result);
     // return the result data
     return result;
   }
@@ -95,7 +95,7 @@ export const getDb = async () => {
 // Logic to PUT method that accepts some content and adds it to the database
 // Export a function that will use to PUT to the database.
 export const putDb = async (content) => {
-  console.log('Try to implement PUT method to the database');
+  console.log('⏳ - Try to implement PUT method to the database');
   try {
     
     // Create a connection to the database and the version we want to use.
