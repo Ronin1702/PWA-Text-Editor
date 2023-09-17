@@ -82,7 +82,7 @@ h1 {
 
 .btn {
   text-align: center;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 0.5rem 1.2rem;
   margin: 0;
   text-decoration: none;
@@ -208,4 +208,8 @@ h1 {
   h1 {
     font-size: 18px;
   }
+}
+
+.hidden {
+  display: none;
 }
