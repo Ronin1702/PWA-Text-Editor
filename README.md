@@ -218,6 +218,9 @@ SO THAT I can reliably retrieve them for later use
 ### IndexedDB
 ![IndexedDB](./client/src/images/jate-3000-idb.png)
 
+### Installed View
+![Installed View](./client/src/images/jate-3000-installed-view.png)
+
 [*back to top*](#table-of-contents)
 
 ## Links
@@ -236,5 +239,4 @@ SO THAT I can reliably retrieve them for later use
 [*back to top*](#table-of-contents)
 
 ---
-
 [![Copyright](https://img.shields.io/static/v1.svg?label=JATE-3000%20©️%20&message=%202023%20Kai%20Chen&labelColor=informational&color=033450)](https://kaichen.biz)
