@@ -206,7 +206,17 @@ SO THAT I can reliably retrieve them for later use
 
 ## Screenshots
 
-![Demo GIF](./client/src/images/00-demo.gif)
+### Main Page
+![Screenshot](./client/src/images/jate-3000-screenshot.png)
+
+### Manifest File
+![Manifest](./client/src/images/jate-3000-manifest.png)
+
+### Service Worker
+![Service Worker](./client/src/images/jate-3000-sw.png)
+
+### IndexedDB
+![IndexedDB](./client/src/images/jate-3000-idb.png)
 
 [*back to top*](#table-of-contents)
 
